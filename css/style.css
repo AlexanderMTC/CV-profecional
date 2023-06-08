@@ -11,6 +11,12 @@
   --menu-mobile-background-color: #3a4460;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -145,6 +151,9 @@ a {
 }
 
 .profile {
+  display: flex;
+  flex: auto;
+  justify-content: space-evenly;
   text-align: center;
 }
 
