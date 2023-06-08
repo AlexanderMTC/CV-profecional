@@ -3,6 +3,7 @@
 :root {
   --theme-color: white;
   --primary-color: #124f88;
+  --primary-color-alpha: #124f88da;
   --secundary-color: #f7c331;
   --text-color-inverse: white;
   --text-color: black;
@@ -26,19 +27,16 @@ a {
   color: var(--text-color);
 }
 
-.horizontal-padding {
-  padding-left: 25px;
-  padding-right: 25px;
+.container {
+  padding: 25px;
 }
-.vertical-padding {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
+
+/* Header */
 
 .topheader {
   box-shadow: 0 4px 5px var(--navbar-shallow-color);
   position: fixed;
-  background-color: #51a6f5;
+  background-color: var(--primary-color-alpha);
   left: 0;
   top: 0;
   width: 100%;
@@ -55,7 +53,7 @@ a {
 
 /* Logo */
 
-.logo {
+.topnav__logo {
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -63,8 +61,10 @@ a {
   color: var(--primary-color);
 }
 
-.logo img {
+.topnav__img {
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 /* Menu */
@@ -75,11 +75,11 @@ a {
   padding: 0;
 }
 
-.menu li {
+.menu__Li {
   padding: 0 15px;
 }
 
-.menu a {
+.menu__Link {
   color: var(--text-color);
   font-size: 18px;
   font-weight: 500;
@@ -88,7 +88,7 @@ a {
   position: relative;
 }
 
-.menu a::after {
+.menu__Link::after {
   content: "";
   background-color: var(--secundary-color);
   position: absolute;
@@ -101,39 +101,41 @@ a {
   transition: opacity 0.3s;
 }
 
-.menu a.selected::after,
-.menu a:hover::after {
+.menu__Link.selected::after,
+.menu__Link:hover::after {
   opacity: 0.8;
 }
 
-.menu a:hover {
+.menu__Link:hover {
   color: var(--primary-color);
 }
 
-.open-menu,
-.close-menu {
+.topnav__menu--open,
+.topnav__menu--close {
   display: none;
 }
 
-.logotype {
+.topnav__logotype {
   display: flex;
   justify-content: center;
 }
 
-.profile-info {
+/* Profile */
+
+.profile__info {
   margin-bottom: 25px;
 }
 
-.profile-img {
+.profile__img {
   width: 80%;
   max-width: 300px;
 }
 
-.profile-img-section {
+.profile__img--section {
   position: relative;
 }
 
-.profile-img-line {
+.profile__img--line {
   background-color: var(--secundary-color);
   height: 15px;
   position: absolute;
@@ -146,7 +148,7 @@ a {
   text-align: center;
 }
 
-.profile-title {
+.profile__title {
   font-size: 35px;
   font-weight: bold;
   margin: 0;
@@ -154,7 +156,7 @@ a {
   font-family: "Noto Sans", sans-serif;
 }
 
-.profile-details {
+.profile__details {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.3;
@@ -162,7 +164,7 @@ a {
   margin: 20px auto;
 }
 
-.profile-btn {
+.profile__btn {
   background-color: var(--primary-color);
   color: var(--text-color-inverse);
   border: none;
@@ -172,9 +174,11 @@ a {
   cursor: pointer;
 }
 
-.profile-btn:hover {
+.profile__btn:hover {
   filter: brightness(130%);
 }
+
+/* Skills */
 
 .skills {
   max-width: 980px;
@@ -184,24 +188,24 @@ a {
 #skills {
   background-color: #51a6f5;
 }
-.skills-title {
+.skills__title {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
-.skills-skill {
+.skills__skill {
   font-size: 20px;
   font-weight: 500;
   background-color: lightblue;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
-  padding: 0.5em 0.7em;
+  padding: 0.5rem 2rem;
   margin: 10px;
 }
 
-.skills-list {
+.skills__list {
   list-style: none;
   padding: 0;
 
@@ -210,19 +214,21 @@ a {
   justify-content: center;
 }
 
+/* Experience */
+
 .epreriences {
   max-width: 980px;
   margin: 0 auto;
 }
 
-.experience-title {
+.experience__title {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
-.experience {
+.experience__content {
   font-size: 20px;
   font-weight: 500;
   background-color: lightblue;
@@ -232,7 +238,7 @@ a {
   margin: 5px;
 }
 
-.experience-list {
+.experience__list {
   list-style: none;
   padding: 0;
 
@@ -241,7 +247,9 @@ a {
   justify-content: center;
 }
 
-.footer-container {
+/* Footer */
+
+.footer__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,13 +258,13 @@ a {
   border: thin solid blue;
 }
 
-.footer-social {
+.footer__social {
   display: flex;
   gap: 1rem;
   border-bottom: medium solid #fff;
 }
 
-.footer-copyright {
+.footer__copyright {
   color: #fff;
   padding-bottom: 0.5rem;
 }
@@ -271,7 +279,7 @@ a {
   padding: 1rem;
 }
 
-.form-title {
+.form__title {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -288,15 +296,16 @@ a {
 }
 
 .input::placeholder {
-  color: #000;
+  color: #0000008d;
   font-family: "raleway", "sans-serif";
+  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"] {
   display: inline-block;
   width: 49%;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .form textarea {
@@ -318,16 +327,29 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
-  .horizontal-padding {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-  .vertical-padding {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  .container {
+    padding: 70px;
   }
 
   /* Menu */
+  .topnav__menu--open,
+  .topnav__menu--close {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .topnav__menu--close {
+    align-self: flex-end;
+    padding: 20px 15px;
+  }
+
+  .topnav__menu--open:focus:not(:focus-visible),
+  .topnav__menu--close:focus:not(:focus-visible) {
+    outline: none;
+  }
+
   .menu {
     flex-direction: column;
     position: fixed;
@@ -344,27 +366,14 @@ input[type="submit"]:hover {
     transition: opacity 0.3s;
   }
 
-  .menu li {
+  .menu__Li {
     padding: 0;
   }
 
-  .menu a {
+  .menu__Link {
     color: var(--text-color-inverse);
     line-height: 70px;
     font-size: 25px;
-  }
-
-  .open-menu,
-  .close-menu {
-    display: block;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-
-  .close-menu {
-    align-self: flex-end;
-    padding: 20px 15px;
   }
 
   .menu_opened {
@@ -372,26 +381,22 @@ input[type="submit"]:hover {
     pointer-events: all;
   }
 
-  .open-menu:focus:not(:focus-visible),
-  .close-menu:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  .menu a::after {
+  .menu__Link::after {
     content: none;
   }
 
-  .menu a:hover,
-  .menu a.selected {
+  .menu__Link:hover,
+  .menu__Link.selected {
     color: var(--secundary-color);
   }
 
   /*Profile*/
-  .profile-info {
-    margin-bottom: 0px;
+  .profile__info {
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .profile-img {
+  .profile__img {
     width: 100%;
     max-width: 350px;
     transform: scaleX(-1);
@@ -400,42 +405,44 @@ input[type="submit"]:hover {
   .profile {
     text-align: left;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
+    align-items: center;
     max-width: 980px;
     margin: 0 auto;
-    align-items: center;
   }
 
-  .profile-title {
-    font-size: 60px;
+  .profile__title {
+    font-size: 3rem;
+    text-align: center;
   }
 
-  .profile-details {
-    font-size: 25px;
+  .profile__details {
+    font-size: 1.5rem;
     margin: 30px 0;
   }
 
-  .profile-btn {
-    font-size: 28px;
+  .profile__btn {
+    font-size: 1.5rem;
   }
 
   /*Skills*/
-  .skills-title {
+  .skills__title {
     font-size: 50px;
   }
 
-  .skills-skill {
+  .skills__skill {
     font-size: 30px;
     margin: 20px;
   }
 
   /*Experience*/
-  .experience-title {
+  .experience__title {
     font-size: 50px;
   }
 
   /*Footer*/
-  .form-title {
+  .form__title {
     font-size: 50px;
   }
 }

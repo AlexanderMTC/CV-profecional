@@ -20,136 +20,131 @@
   <body>
     <header class="topheader">
       <nav class="topnav">
-        <a href="#" class="logo">
-          <img height="50" width="50" src="img/avatar.jpg" alt="avatar" />
-          <div class="logotype">Avatar</div>
+        <a href="#" class="topnav__logo">
+          <img class="topnav__img" src="img/avatar.jpg" alt="avatar" />
+          <div class="topnav__logotype">Avatar</div>
         </a>
-        <button class="open-menu" aria-label="Abrir menú">
+        <button class="topnav__menu--open" aria-label="Abrir menú">
           <img src="img/hamburger-icon.svg" alt="abrir menú" />
         </button>
         <ul class="menu">
-          <button class="close-menu" aria-label="Cerrar menú">
+          <button class="topnav__menu--close" aria-label="Cerrar menú">
             <img src="img/close-icon.svg" alt="cerrar menú" />
           </button>
-          <li><a class="menuLink" href="#">Perfil</a></li>
-          <li><a class="menuLink" href="#skills">Habilidades</a></li>
-          <li><a class="menuLink" href="#experience">Experiencia</a></li>
-          <li><a class="menuLink" href="#contact">Contacto</a></li>
+          <li class="menu__Li"><a class="menu__Link" href="#">Perfil</a></li>
+          <li class="menu__Li">
+            <a class="menu__Link" href="#skills">Habilidades</a>
+          </li>
+          <li class="menu__Li">
+            <a class="menu__Link" href="#experience">Experiencia</a>
+          </li>
+          <li class="menu__Li">
+            <a class="menu__Link" href="#contact">Contacto</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <div class="horizontal-padding vertical-padding">
-      <section class="profile">
-        <div class="profile-info">
-          <h1 class="profile-title">Hola, soy <br />Nombre</h1>
-          <p class="profile-details">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-            earum, culpa nam illum accusantium, quaerat eos soluta iusto minus
-            nulla voluptate veritatis dicta quibusdam nemo accusamus officiis
-            maiores qui ad!
-          </p>
-          <button class="profile-btn">Descargar cv</button>
-        </div>
-        <span class="profile-img-section">
-          <img class="profile-img" src="img/avatar.jpg" alt="avatar" />
-          <div class="profile-img-line"></div>
-        </span>
-      </section>
-    </div>
+    <main class="main">
+      <div id="profile" class="container">
+        <section class="profile">
+          <div class="profile__info">
+            <h1 class="profile__title">Hola, soy <br />Nombre</h1>
+            <p class="profile__details">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+              earum, culpa nam illum accusantium, quaerat eos soluta iusto minus
+              nulla voluptate veritatis dicta quibusdam nemo accusamus officiis
+              maiores qui ad!
+            </p>
+            <button class="profile__btn">Descargar cv</button>
+          </div>
+          <span class="profile__img--section">
+            <img class="profile__img" src="img/avatar.jpg" alt="avatar" />
+            <div class="profile__img--line"></div>
+          </span>
+        </section>
+      </div>
 
-    <div id="skills" class="horizontal-padding vertical-padding">
-      <section class="skills">
-        <h2 class="skills-title">Habilidades</h2>
-        <ul class="skills-list">
-          <li class="skills-skill">Skill</li>
-          <li class="skills-skill">Skill2</li>
-          <li class="skills-skill">Skill3</li>
-          <li class="skills-skill">Skill4</li>
-          <li class="skills-skill">Skill5</li>
-          <li class="skills-skill">Skill6</li>
-        </ul>
-      </section>
-    </div>
+      <div id="skills" class="container">
+        <section class="skills">
+          <h2 class="skills__title">Habilidades</h2>
+          <ul class="skills__list">
+            <li class="skills__skill">Skill-1</li>
+            <li class="skills__skill">Skill-2</li>
+            <li class="skills__skill">Skill-3</li>
+            <li class="skills__skill">Skill-4</li>
+            <li class="skills__skill">Skill-5</li>
+            <li class="skills__skill">Skill-6</li>
+          </ul>
+        </section>
+      </div>
 
-    <div id="experience" class="horizontal-padding vertical-padding">
-      <section class="experiences">
-        <h2 class="experience-title">Experiencia</h2>
-        <ul class="experience-list">
-          <li class="experience">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-              unde sapiente alias laborum optio molestias officiis! Doloribus
-              architecto sed ipsa itaque eum! Nemo incidunt maiores dicta
-              repellat quos rem quas!
-            </p>
-          </li>
-          <li class="experience">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
-              soluta impedit alias minus recusandae eligendi nemo, iusto modi
-              minima dolor sint, quam, deleniti eos ea. Cupiditate impedit aut
-              eius molestiae?
-            </p>
-          </li>
-          <li class="experience">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Consequatur nisi quos hic velit modi commodi magnam dignissimos,
-              repellat veniam tempora saepe a illum aliquid aliquam consequuntur
-              quia dolor earum neque.
-            </p>
-          </li>
-          <li class="experience">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
-              error voluptas, animi mollitia aut veritatis aspernatur nam
-              placeat cupiditate sequi iusto voluptatem fugiat officia delectus
-              dolorem quam adipisci modi. Itaque.
-            </p>
-          </li>
-          <li class="experience">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ab.
-              Quae accusamus eveniet, esse sit vel cupiditate officiis illo
-              tempore repellat, libero asperiores et repudiandae ab voluptates
-              reprehenderit maxime nisi.
-            </p>
-          </li>
-          <li class="experience">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Obcaecati rem soluta maiores eum, sed minima consectetur dolorum
-              ullam et quia distinctio corrupti nobis voluptate. Sapiente sequi
-              sed dicta totam doloribus!
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
+      <div id="experience" class="container">
+        <section class="experiences">
+          <h2 class="experience__title">Experiencia</h2>
+          <ul class="experience__list">
+            <li class="experience__content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                unde sapiente alias laborum optio molestias officiis! Doloribus
+                architecto sed ipsa itaque eum! Nemo incidunt maiores dicta
+                repellat quos rem quas!
+              </p>
+            </li>
+            <li class="experience__content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorum soluta impedit alias minus recusandae eligendi nemo,
+                iusto modi minima dolor sint, quam, deleniti eos ea. Cupiditate
+                impedit aut eius molestiae?
+              </p>
+            </li>
+            <li class="experience__content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequatur nisi quos hic velit modi commodi magnam dignissimos,
+                repellat veniam tempora saepe a illum aliquid aliquam
+                consequuntur quia dolor earum neque.
+              </p>
+            </li>
+            <li class="experience__content">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum,
+                error voluptas, animi mollitia aut veritatis aspernatur nam
+                placeat cupiditate sequi iusto voluptatem fugiat officia
+                delectus dolorem quam adipisci modi. Itaque.
+              </p>
+            </li>
+            <li class="experience__content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+                ab. Quae accusamus eveniet, esse sit vel cupiditate officiis
+                illo tempore repellat, libero asperiores et repudiandae ab
+                voluptates reprehenderit maxime nisi.
+              </p>
+            </li>
+            <li class="experience__content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Obcaecati rem soluta maiores eum, sed minima consectetur dolorum
+                ullam et quia distinctio corrupti nobis voluptate. Sapiente
+                sequi sed dicta totam doloribus!
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
 
     <footer id="contact">
       <section class="contact">
-        <h2 class="form-title">Contacto</h2>
-        <form action="" class="form">
-          <input
-            class="input"
-            type="text"
-            name="name"
-            id=""
-            placeholder="Nombre"
-          />
-          <input
-            class="input"
-            type="email"
-            name="email"
-            id=""
-            placeholder="Email"
-          />
+        <h2 class="form__title">Contacto</h2>
+        <form class="form">
+          <input class="input" type="text" name="name" placeholder="Nombre" />
+          <input class="input" type="email" name="email" placeholder="Email" />
           <textarea
             class="input"
             name="message"
-            id=""
             cols="30"
             rows="10"
             placeholder="Mensaje"
@@ -158,26 +153,26 @@
         </form>
       </section>
 
-      <section class="footer-container">
-        <div class="footer-social">
+      <section class="footer__container">
+        <div class="footer__social">
           <a href="#" class="footer__icons"
-            ><img src="./img/facebook.svg" class="footer-img"
+            ><img src="./img/facebook.svg" class="footer__img"
           /></a>
           <a href="#" class="footer__icons"
-            ><img src="./img/twitter.svg" class="footer-img"
+            ><img src="./img/twitter.svg" class="footer__img"
           /></a>
           <a href="#" class="footer__icons"
-            ><img src="./img/instagram.svg" class="footer-img"
+            ><img src="./img/instagram.svg" class="footer__img"
           /></a>
           <a href="#" class="footer__icons"
-            ><img src="./img/icons8-linkedin.svg" class="footer-img"
+            ><img src="./img/icons8-linkedin.svg" class="footer__img"
           /></a>
           <a href="#" class="footer__icons"
-            ><img src="./img/icons8-github.svg" class="footer-img"
+            ><img src="./img/icons8-github.svg" class="footer__img"
           /></a>
         </div>
 
-        <h3 class="footer-copyright">
+        <h3 class="footer__copyright">
           Copyright &copy;
           <script>
             document.write(new Date().getFullYear());
